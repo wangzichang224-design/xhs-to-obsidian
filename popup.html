@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XHS to Obsidian</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <h1>XHS to Obsidian</h1>
+        <p id="status" class="status">Preparing...</p>
+      </header>
+
+      <section class="settings" aria-label="Obsidian settings">
+        <label>
+          <span>Local REST API URL</span>
+          <input id="baseUrl" type="url" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:27123">
+        </label>
+
+        <label>
+          <span>API Key</span>
+          <input id="apiKey" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your Obsidian API key">
+        </label>
+
+        <label>
+          <span>Vault Folder</span>
+          <input id="folder" type="text" autocomplete="off" spellcheck="false" placeholder="Interviews/XHS">
+        </label>
+      </section>
+
+      <section class="actions" aria-label="Actions">
+        <button id="saveSettings" type="button" class="secondary">Save Settings</button>
+        <button id="exportNow" type="button">Export</button>
+      </section>
+
+      <section class="preview" aria-label="Extracted Markdown preview">
+        <div class="preview-title">Markdown Preview</div>
+        <pre id="previewText">No content extracted yet.</pre>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
