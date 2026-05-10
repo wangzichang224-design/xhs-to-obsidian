@@ -1,0 +1,7 @@
+dist/
+output/
+scripts/
+*.zip
+*.log
+.DS_Store
+Thumbs.db
